@@ -10,3 +10,16 @@ services:
     volumes:
       - ./express-server:/app
       - /app/node_modules
+      - /express-server/.env
+      - /react-app
+
+  react-app:
+    build: ./react-frontend
+    container_name: react-app-container
+    ports:
+      - '5173:5173'
+    stdin_open: true
+    tty: true
+    command: npm run dev -- --host
+    env_file:
+      - ./react-frontend/.env
