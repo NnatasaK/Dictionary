@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+
+  express-server:
+    build: ./express-server
+    container_name: express-server-container
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./express-server:/app
+      - /app/node_modules
