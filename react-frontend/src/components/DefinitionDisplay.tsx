@@ -1,28 +1,8 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
+import { DefinitionDisplayProps, Phonetic } from '../types/types';
 
-interface DefinitionDisplayProps {
-    word: string;
-    definition: Definition | null;
-    setDefinition: (definition: Definition | null) => void;
-    addFavoriteWord: (word: string) => void;
-}
 
-interface Definition {
-    word: string;
-    phonetics: Phonetic[];
-    meanings: Meaning[];
-}
-
-interface Phonetic {
-    text: string;
-    audio: string;
-}
-
-interface Meaning {
-    partOfSpeech: string;
-    definitions: { definition: string; example?: string }[];
-}
 
 const apiUrl = import.meta.env.VITE_API_URL || '';
 
