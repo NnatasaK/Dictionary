@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
+import { SearchBarProps } from '../types/types';
 
-interface SearchBarProps {
-    setWord: (word: string) => void;
-}
 
 const SearchBar: React.FC<SearchBarProps> = ({ setWord }) => {
     const [input, setInput] = useState<string>('');
 
     const handleSearch = () => {
+
         if (input.trim()) {
             setWord(input);
         }
