@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SearchBar from './components/SearchBar';
 import DefinitionDisplay from './components/DefinitionDisplay';
-import FavoriteWords from './components/FavoriteWors';
+import FavoriteWords from './components/FavoriteWords';
 import ThemeToggle from './components/ThemeToggle';
 import './index.css'
 
